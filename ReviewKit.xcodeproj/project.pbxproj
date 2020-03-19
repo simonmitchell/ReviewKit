@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B197DB102423962200D3DBCF /* ReviewKit_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B197DB0E2423962200D3DBCF /* ReviewKit_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B197DB1D2423963100D3DBCF /* ReviewKit_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B197DB1B2423963100D3DBCF /* ReviewKit_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B197DB2A2423963D00D3DBCF /* ReviewKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B197DB282423963D00D3DBCF /* ReviewKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B197DB362423974C00D3DBCF /* Collection+Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2E2423974C00D3DBCF /* Collection+Average.swift */; };
+		B197DB372423974C00D3DBCF /* Collection+Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2E2423974C00D3DBCF /* Collection+Average.swift */; };
+		B197DB382423974C00D3DBCF /* Collection+Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2E2423974C00D3DBCF /* Collection+Average.swift */; };
+		B197DB392423974C00D3DBCF /* Collection+Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2E2423974C00D3DBCF /* Collection+Average.swift */; };
+		B197DB3A2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2F2423974C00D3DBCF /* ReviewRequestControllerStorage.swift */; };
+		B197DB3B2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2F2423974C00D3DBCF /* ReviewRequestControllerStorage.swift */; };
+		B197DB3C2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2F2423974C00D3DBCF /* ReviewRequestControllerStorage.swift */; };
+		B197DB3D2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB2F2423974C00D3DBCF /* ReviewRequestControllerStorage.swift */; };
+		B197DB3E2423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB302423974C00D3DBCF /* ClosedRange+Clamp.swift */; };
+		B197DB3F2423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB302423974C00D3DBCF /* ClosedRange+Clamp.swift */; };
+		B197DB402423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB302423974C00D3DBCF /* ClosedRange+Clamp.swift */; };
+		B197DB412423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB302423974C00D3DBCF /* ClosedRange+Clamp.swift */; };
+		B197DB422423974C00D3DBCF /* ReviewRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB312423974C00D3DBCF /* ReviewRequestController.swift */; };
+		B197DB432423974C00D3DBCF /* ReviewRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB312423974C00D3DBCF /* ReviewRequestController.swift */; };
+		B197DB442423974C00D3DBCF /* ReviewRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB312423974C00D3DBCF /* ReviewRequestController.swift */; };
+		B197DB452423974C00D3DBCF /* ReviewRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB312423974C00D3DBCF /* ReviewRequestController.swift */; };
+		B197DB462423974C00D3DBCF /* Version+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB322423974C00D3DBCF /* Version+Number.swift */; };
+		B197DB472423974C00D3DBCF /* Version+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB322423974C00D3DBCF /* Version+Number.swift */; };
+		B197DB482423974C00D3DBCF /* Version+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB322423974C00D3DBCF /* Version+Number.swift */; };
+		B197DB492423974C00D3DBCF /* Version+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB322423974C00D3DBCF /* Version+Number.swift */; };
+		B197DB4A2423974C00D3DBCF /* ReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB332423974C00D3DBCF /* ReviewRequester.swift */; };
+		B197DB4B2423974C00D3DBCF /* ReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB332423974C00D3DBCF /* ReviewRequester.swift */; };
+		B197DB4C2423974C00D3DBCF /* ReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB332423974C00D3DBCF /* ReviewRequester.swift */; };
+		B197DB4D2423974C00D3DBCF /* ReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB332423974C00D3DBCF /* ReviewRequester.swift */; };
+		B197DB4E2423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB342423974C00D3DBCF /* AppStoreReviewRequester.swift */; };
+		B197DB4F2423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB342423974C00D3DBCF /* AppStoreReviewRequester.swift */; };
+		B197DB502423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB342423974C00D3DBCF /* AppStoreReviewRequester.swift */; };
+		B197DB512423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB342423974C00D3DBCF /* AppStoreReviewRequester.swift */; };
+		B197DB522423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB352423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift */; };
+		B197DB532423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB352423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift */; };
+		B197DB542423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB352423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift */; };
+		B197DB552423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197DB352423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B197DAFF242395B300D3DBCF /* ReviewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B197DB0C2423962200D3DBCF /* ReviewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B197DB0E2423962200D3DBCF /* ReviewKit_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewKit_watchOS.h; sourceTree = "<group>"; };
+		B197DB0F2423962200D3DBCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B197DB192423963100D3DBCF /* ReviewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B197DB1B2423963100D3DBCF /* ReviewKit_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewKit_tvOS.h; sourceTree = "<group>"; };
+		B197DB1C2423963100D3DBCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B197DB262423963D00D3DBCF /* ReviewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B197DB282423963D00D3DBCF /* ReviewKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewKit_macOS.h; sourceTree = "<group>"; };
+		B197DB292423963D00D3DBCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B197DB2E2423974C00D3DBCF /* Collection+Average.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Collection+Average.swift"; path = "Sources/ReviewKit/Collection+Average.swift"; sourceTree = "<group>"; };
+		B197DB2F2423974C00D3DBCF /* ReviewRequestControllerStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewRequestControllerStorage.swift; path = Sources/ReviewKit/ReviewRequestControllerStorage.swift; sourceTree = "<group>"; };
+		B197DB302423974C00D3DBCF /* ClosedRange+Clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ClosedRange+Clamp.swift"; path = "Sources/ReviewKit/ClosedRange+Clamp.swift"; sourceTree = "<group>"; };
+		B197DB312423974C00D3DBCF /* ReviewRequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewRequestController.swift; path = Sources/ReviewKit/ReviewRequestController.swift; sourceTree = "<group>"; };
+		B197DB322423974C00D3DBCF /* Version+Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Version+Number.swift"; path = "Sources/ReviewKit/Version+Number.swift"; sourceTree = "<group>"; };
+		B197DB332423974C00D3DBCF /* ReviewRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewRequester.swift; path = Sources/ReviewKit/ReviewRequester.swift; sourceTree = "<group>"; };
+		B197DB342423974C00D3DBCF /* AppStoreReviewRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppStoreReviewRequester.swift; path = Sources/ReviewKit/AppStoreReviewRequester.swift; sourceTree = "<group>"; };
+		B197DB352423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserDefaults+ReviewRequestControllerStorage.swift"; path = "Sources/ReviewKit/UserDefaults+ReviewRequestControllerStorage.swift"; sourceTree = "<group>"; };
+		B1A5845E24224EE100BE4737 /* ReviewKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewKit.h; sourceTree = "<group>"; };
+		B1A5845F24224EE100BE4737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B197DAFC242395B300D3DBCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB092423962200D3DBCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB162423963100D3DBCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB232423963D00D3DBCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B197DB0D2423962200D3DBCF /* ReviewKit-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				B197DB0E2423962200D3DBCF /* ReviewKit_watchOS.h */,
+				B197DB0F2423962200D3DBCF /* Info.plist */,
+			);
+			name = "ReviewKit-watchOS";
+			path = "Sources/ReviewKit-watchOS";
+			sourceTree = "<group>";
+		};
+		B197DB1A2423963100D3DBCF /* ReviewKit-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				B197DB1B2423963100D3DBCF /* ReviewKit_tvOS.h */,
+				B197DB1C2423963100D3DBCF /* Info.plist */,
+			);
+			name = "ReviewKit-tvOS";
+			path = "Sources/ReviewKit-tvOS";
+			sourceTree = "<group>";
+		};
+		B197DB272423963D00D3DBCF /* ReviewKit-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B197DB282423963D00D3DBCF /* ReviewKit_macOS.h */,
+				B197DB292423963D00D3DBCF /* Info.plist */,
+			);
+			name = "ReviewKit-macOS";
+			path = "Sources/ReviewKit-macOS";
+			sourceTree = "<group>";
+		};
+		B1A5845124224EE100BE4737 = {
+			isa = PBXGroup;
+			children = (
+				B1A5845D24224EE100BE4737 /* ReviewKit */,
+				B197DB0D2423962200D3DBCF /* ReviewKit-watchOS */,
+				B197DB1A2423963100D3DBCF /* ReviewKit-tvOS */,
+				B197DB272423963D00D3DBCF /* ReviewKit-macOS */,
+				B1A5845C24224EE100BE4737 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1A5845C24224EE100BE4737 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B197DAFF242395B300D3DBCF /* ReviewKit.framework */,
+				B197DB0C2423962200D3DBCF /* ReviewKit.framework */,
+				B197DB192423963100D3DBCF /* ReviewKit.framework */,
+				B197DB262423963D00D3DBCF /* ReviewKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1A5845D24224EE100BE4737 /* ReviewKit */ = {
+			isa = PBXGroup;
+			children = (
+				B197DB342423974C00D3DBCF /* AppStoreReviewRequester.swift */,
+				B197DB302423974C00D3DBCF /* ClosedRange+Clamp.swift */,
+				B197DB2E2423974C00D3DBCF /* Collection+Average.swift */,
+				B197DB312423974C00D3DBCF /* ReviewRequestController.swift */,
+				B197DB2F2423974C00D3DBCF /* ReviewRequestControllerStorage.swift */,
+				B197DB332423974C00D3DBCF /* ReviewRequester.swift */,
+				B197DB352423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift */,
+				B197DB322423974C00D3DBCF /* Version+Number.swift */,
+				B1A5845E24224EE100BE4737 /* ReviewKit.h */,
+				B1A5845F24224EE100BE4737 /* Info.plist */,
+			);
+			name = ReviewKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B197DAFA242395B300D3DBCF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB072423962200D3DBCF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B197DB102423962200D3DBCF /* ReviewKit_watchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB142423963100D3DBCF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B197DB1D2423963100D3DBCF /* ReviewKit_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB212423963D00D3DBCF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B197DB2A2423963D00D3DBCF /* ReviewKit_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B197DAFE242395B300D3DBCF /* ReviewKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B197DB04242395B300D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-iOS" */;
+			buildPhases = (
+				B197DAFA242395B300D3DBCF /* Headers */,
+				B197DAFB242395B300D3DBCF /* Sources */,
+				B197DAFC242395B300D3DBCF /* Frameworks */,
+				B197DAFD242395B300D3DBCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReviewKit-iOS";
+			productName = "ReviewKit-iOS";
+			productReference = B197DAFF242395B300D3DBCF /* ReviewKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B197DB0B2423962200D3DBCF /* ReviewKit-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B197DB112423962200D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-watchOS" */;
+			buildPhases = (
+				B197DB072423962200D3DBCF /* Headers */,
+				B197DB082423962200D3DBCF /* Sources */,
+				B197DB092423962200D3DBCF /* Frameworks */,
+				B197DB0A2423962200D3DBCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReviewKit-watchOS";
+			productName = "ReviewKit-watchOS";
+			productReference = B197DB0C2423962200D3DBCF /* ReviewKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B197DB182423963100D3DBCF /* ReviewKit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B197DB1E2423963100D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-tvOS" */;
+			buildPhases = (
+				B197DB142423963100D3DBCF /* Headers */,
+				B197DB152423963100D3DBCF /* Sources */,
+				B197DB162423963100D3DBCF /* Frameworks */,
+				B197DB172423963100D3DBCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReviewKit-tvOS";
+			productName = "ReviewKit-tvOS";
+			productReference = B197DB192423963100D3DBCF /* ReviewKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B197DB252423963D00D3DBCF /* ReviewKit-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B197DB2B2423963D00D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-macOS" */;
+			buildPhases = (
+				B197DB212423963D00D3DBCF /* Headers */,
+				B197DB222423963D00D3DBCF /* Sources */,
+				B197DB232423963D00D3DBCF /* Frameworks */,
+				B197DB242423963D00D3DBCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReviewKit-macOS";
+			productName = "ReviewKit-macOS";
+			productReference = B197DB262423963D00D3DBCF /* ReviewKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1A5845224224EE100BE4737 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Simon Mitchell";
+				TargetAttributes = {
+					B197DAFE242395B300D3DBCF = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					B197DB0B2423962200D3DBCF = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					B197DB182423963100D3DBCF = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					B197DB252423963D00D3DBCF = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = B1A5845524224EE100BE4737 /* Build configuration list for PBXProject "ReviewKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1A5845124224EE100BE4737;
+			productRefGroup = B1A5845C24224EE100BE4737 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B197DAFE242395B300D3DBCF /* ReviewKit-iOS */,
+				B197DB0B2423962200D3DBCF /* ReviewKit-watchOS */,
+				B197DB182423963100D3DBCF /* ReviewKit-tvOS */,
+				B197DB252423963D00D3DBCF /* ReviewKit-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B197DAFD242395B300D3DBCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB0A2423962200D3DBCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB172423963100D3DBCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB242423963D00D3DBCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B197DAFB242395B300D3DBCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B197DB362423974C00D3DBCF /* Collection+Average.swift in Sources */,
+				B197DB3E2423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
+				B197DB522423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
+				B197DB4A2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B197DB462423974C00D3DBCF /* Version+Number.swift in Sources */,
+				B197DB3A2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
+				B197DB422423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
+				B197DB4E2423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB082423962200D3DBCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B197DB372423974C00D3DBCF /* Collection+Average.swift in Sources */,
+				B197DB3F2423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
+				B197DB532423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
+				B197DB4B2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B197DB472423974C00D3DBCF /* Version+Number.swift in Sources */,
+				B197DB3B2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
+				B197DB432423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
+				B197DB4F2423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB152423963100D3DBCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B197DB382423974C00D3DBCF /* Collection+Average.swift in Sources */,
+				B197DB402423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
+				B197DB542423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
+				B197DB4C2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B197DB482423974C00D3DBCF /* Version+Number.swift in Sources */,
+				B197DB3C2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
+				B197DB442423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
+				B197DB502423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B197DB222423963D00D3DBCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B197DB392423974C00D3DBCF /* Collection+Average.swift in Sources */,
+				B197DB412423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
+				B197DB552423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
+				B197DB4D2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B197DB492423974C00D3DBCF /* Version+Number.swift in Sources */,
+				B197DB3D2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
+				B197DB452423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
+				B197DB512423974C00D3DBCF /* AppStoreReviewRequester.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B197DB05242395B300D3DBCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/ReviewKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-iOS";
+				PRODUCT_NAME = ReviewKit;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B197DB06242395B300D3DBCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/ReviewKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-iOS";
+				PRODUCT_NAME = ReviewKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B197DB122423962200D3DBCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/ReviewKit-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-watchOS";
+				PRODUCT_NAME = ReviewKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B197DB132423962200D3DBCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/ReviewKit-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-watchOS";
+				PRODUCT_NAME = ReviewKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B197DB1F2423963100D3DBCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/ReviewKit-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-tvOS";
+				PRODUCT_NAME = ReviewKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		B197DB202423963100D3DBCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/ReviewKit-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-tvOS";
+				PRODUCT_NAME = ReviewKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		B197DB2C2423963D00D3DBCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/ReviewKit-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-macOS";
+				PRODUCT_NAME = ReviewKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B197DB2D2423963D00D3DBCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5AAUAL6K5G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Sources/ReviewKit-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-macOS";
+				PRODUCT_NAME = ReviewKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B1A5846124224EE100BE4737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1A5846224224EE100BE4737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B197DB04242395B300D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B197DB05242395B300D3DBCF /* Debug */,
+				B197DB06242395B300D3DBCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B197DB112423962200D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B197DB122423962200D3DBCF /* Debug */,
+				B197DB132423962200D3DBCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B197DB1E2423963100D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B197DB1F2423963100D3DBCF /* Debug */,
+				B197DB202423963100D3DBCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B197DB2B2423963D00D3DBCF /* Build configuration list for PBXNativeTarget "ReviewKit-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B197DB2C2423963D00D3DBCF /* Debug */,
+				B197DB2D2423963D00D3DBCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1A5845524224EE100BE4737 /* Build configuration list for PBXProject "ReviewKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1A5846124224EE100BE4737 /* Debug */,
+				B1A5846224224EE100BE4737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1A5845224224EE100BE4737 /* Project object */;
+}
