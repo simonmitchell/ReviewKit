@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B17E7C5A242E9F160020B053 /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E7C59242E9F160020B053 /* Bundle+Version.swift */; };
+		B17E7C5B242E9F160020B053 /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E7C59242E9F160020B053 /* Bundle+Version.swift */; };
+		B17E7C5C242E9F160020B053 /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E7C59242E9F160020B053 /* Bundle+Version.swift */; };
+		B17E7C5D242E9F160020B053 /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E7C59242E9F160020B053 /* Bundle+Version.swift */; };
 		B197DB102423962200D3DBCF /* ReviewKit_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B197DB0E2423962200D3DBCF /* ReviewKit_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B197DB1D2423963100D3DBCF /* ReviewKit_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B197DB1B2423963100D3DBCF /* ReviewKit_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B197DB2A2423963D00D3DBCF /* ReviewKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B197DB282423963D00D3DBCF /* ReviewKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B17E7C59242E9F160020B053 /* Bundle+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bundle+Version.swift"; path = "Sources/ReviewKit/Bundle+Version.swift"; sourceTree = "<group>"; };
 		B197DAFF242395B300D3DBCF /* ReviewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B197DB0C2423962200D3DBCF /* ReviewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B197DB0E2423962200D3DBCF /* ReviewKit_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewKit_watchOS.h; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B197DB342423974C00D3DBCF /* AppStoreReviewRequester.swift */,
+				B17E7C59242E9F160020B053 /* Bundle+Version.swift */,
 				B197DB302423974C00D3DBCF /* ClosedRange+Clamp.swift */,
 				B197DB2E2423974C00D3DBCF /* Collection+Average.swift */,
 				B197DB312423974C00D3DBCF /* ReviewRequestController.swift */,
@@ -365,6 +371,7 @@
 				B197DB3E2423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
 				B197DB522423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
 				B197DB4A2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B17E7C5A242E9F160020B053 /* Bundle+Version.swift in Sources */,
 				B197DB462423974C00D3DBCF /* Version+Number.swift in Sources */,
 				B197DB3A2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
 				B197DB422423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
@@ -380,6 +387,7 @@
 				B197DB3F2423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
 				B197DB532423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
 				B197DB4B2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B17E7C5B242E9F160020B053 /* Bundle+Version.swift in Sources */,
 				B197DB472423974C00D3DBCF /* Version+Number.swift in Sources */,
 				B197DB3B2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
 				B197DB432423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
@@ -395,6 +403,7 @@
 				B197DB402423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
 				B197DB542423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
 				B197DB4C2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B17E7C5C242E9F160020B053 /* Bundle+Version.swift in Sources */,
 				B197DB482423974C00D3DBCF /* Version+Number.swift in Sources */,
 				B197DB3C2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
 				B197DB442423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
@@ -410,6 +419,7 @@
 				B197DB412423974C00D3DBCF /* ClosedRange+Clamp.swift in Sources */,
 				B197DB552423974C00D3DBCF /* UserDefaults+ReviewRequestControllerStorage.swift in Sources */,
 				B197DB4D2423974C00D3DBCF /* ReviewRequester.swift in Sources */,
+				B17E7C5D242E9F160020B053 /* Bundle+Version.swift in Sources */,
 				B197DB492423974C00D3DBCF /* Version+Number.swift in Sources */,
 				B197DB3D2423974C00D3DBCF /* ReviewRequestControllerStorage.swift in Sources */,
 				B197DB452423974C00D3DBCF /* ReviewRequestController.swift in Sources */,
