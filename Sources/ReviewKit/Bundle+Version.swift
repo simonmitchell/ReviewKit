@@ -8,7 +8,7 @@
 #if canImport(Foundation)
 import Foundation
 
-extension Bundle {
+public extension Bundle {
     
     /// Returns the `CFBundleShortVersionString` value from the bundle as a version struct
     var version: ReviewRequestController.Version {
