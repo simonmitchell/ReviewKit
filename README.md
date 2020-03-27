@@ -4,8 +4,8 @@
   <a href="https://github.com/Carthage/Carthage">
   	<img alt="Carthage Compatible" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat">
   </a>
-  <a href="https://swift.org/blog/swift-5-1-released/">
-  	<img alt="Swift 5.0" src="http://img.shields.io/badge/swift-5.1-brightgreen.svg">
+  <a href="https://swift.org/blog/swift-5-2-released/">
+  	<img alt="Swift 5.2" src="http://img.shields.io/badge/swift-5.2-brightgreen.svg">
   </a>
   <a href="https://github.com/simonmitchell/ReviewKit/blob/master/README.md">
   	<img alt="MIT" src="https://img.shields.io/badge/license-MIT-brightgreen.svg">
@@ -32,7 +32,7 @@ Usage on other platforms is outlined [below](#other-platforms)
 [Carthage](https://github.com/Carthage/Carthage) is a package manager which either builds projects and provides you with binaries or uses pre-built frameworks from release tags in GitHub. To add ReviewKit to your project, simply specify it in your `Cartfile`:
 
 ```ogdl
-github "simonmitchell/ReviewKit" ~> 1.0.0
+github "simonmitchell/ReviewKit" ~> 1.1.0
 ```
 
 ### Swift Package Manager
@@ -42,7 +42,7 @@ To add ReviewKit to your project simply add it to your dependencies array:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/simonmitchell/ReviewKit.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/simonmitchell/ReviewKit.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
@@ -60,7 +60,7 @@ Manual installation (as of iOS 13) requires a paid developer license in order to
 To start a new app session, simply call:
 
 ```swift
-RequestController.startSession(version: .init(major: 1, minor: 0, patch: 0))
+RequestController.startSession(version: Bundle.main.version)
 ```
 
 It is very important you call this before logging actions, otherwise they will be stored under a default session with app version `1.0.0`
