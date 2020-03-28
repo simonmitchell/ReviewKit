@@ -390,7 +390,7 @@ public final class ReviewRequestController {
             return
         }
         
-        guard reviewPromptCriteriaSatisfied(for: currentDate) else {
+        guard allReviewPromptCriteriaSatisfied(for: currentDate) else {
             callback?(Result.success(false))
             return
         }
