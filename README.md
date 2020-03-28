@@ -116,6 +116,12 @@ The same checks that the library does internally can be accessed individually th
 | averageScoreThresholdIsMet | Whether the average score over the last 'n' sessions has been met. If no previous sessions are recorded, this will return `false` |
 | currentSessionIsAboveScoreThreshold | Whether the current session has met the required score threshold |
 
+All of these can be checked in one go by checking
+
+```swift
+ReviewRequestController.shared.allReviewPromptCriteriaSatisfied
+```
+
 The values returned in these variables are all based on thee configuration settings below.
 
 ## Configuration

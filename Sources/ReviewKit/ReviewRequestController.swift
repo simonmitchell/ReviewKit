@@ -315,6 +315,53 @@ public final class ReviewRequestController {
         return _currentSession.score > scoreThreshold
     }
     
+    /// Returns whether all review prompt criteria have been satisfied in the current session for the given date
+    /// - Parameter date: The date to check all criteria against
+    /// - Returns: Whether all criteria have been satisfied
+    private func allReviewPromptCriteriaSatisfied(for date: Date = Date()) -> Bool {
+        // Make sure if the session has been marked as bad, then it's ignored if that option is enabled
+        guard !_currentSession.isBad || !disabledForBadSession else {
+            return false
+        }
+        
+        // Make sure we have met the score threshold for this session
+        guard currentSessionIsAboveScoreThreshold else {
+            return false
+        }
+        
+        // Test based on initial timeout
+        guard timeoutSinceFirstSessionHasElapsed(for: date) else {
+            return false
+        }
+        
+        // Make sure timeout since last bad session has elapsed!
+        guard timeoutSinceLastBadSessionHasElapsed(for: date) else {
+            return false
+        }
+        
+        // Test based on version change since last review
+        guard versionChangeSinceLastRequestIsSatisfied else {
+            return false
+        }
+        
+        // Test based on timeout since last review
+        guard timeoutSinceLastRequestHasElapsed(for: date) else {
+            return false
+        }
+
+        // Make sure average score is met!
+        guard averageScoreThresholdIsMet else {
+            return false
+        }
+        
+        return true
+    }
+    
+    /// Returns whether all review prompt criteria have been satisfied in the current session
+    public var allReviewPromptCriteriaSatisfied: Bool {
+        return allReviewPromptCriteriaSatisfied()
+    }
+    
     /// Logs a given app action
     /// - Parameter action: The action that occured
     /// - Parameter callback: A callback which lets you know if a review was requested (Or possibly requested in the case of SKStoreReviewController)
@@ -343,44 +390,7 @@ public final class ReviewRequestController {
             return
         }
         
-        // Make sure if the session has been marked as bad, then it's ignored if that option is enabled
-        guard !_currentSession.isBad || !disabledForBadSession else {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Make sure we have met the score threshold for this session
-        guard currentSessionIsAboveScoreThreshold else {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Test based on initial timeout
-        guard timeoutSinceFirstSessionHasElapsed(for: currentDate) else {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Make sure timeout since last bad session has elapsed!
-        guard timeoutSinceLastBadSessionHasElapsed(for: currentDate) else {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Test based on version change since last review
-        guard versionChangeSinceLastRequestIsSatisfied else {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Test based on timeout since last review
-        guard timeoutSinceLastRequestHasElapsed(for: currentDate) else {
-            callback?(Result.success(false))
-            return
-        }
-
-        // Make sure average score is met!
-        guard averageScoreThresholdIsMet else {
+        guard reviewPromptCriteriaSatisfied(for: currentDate) else {
             callback?(Result.success(false))
             return
         }
