@@ -32,7 +32,7 @@ Usage on other platforms is outlined [below](#other-platforms)
 [Carthage](https://github.com/Carthage/Carthage) is a package manager which either builds projects and provides you with binaries or uses pre-built frameworks from release tags in GitHub. To add ReviewKit to your project, simply specify it in your `Cartfile`:
 
 ```ogdl
-github "simonmitchell/ReviewKit" ~> 1.1.0
+github "simonmitchell/ReviewKit" ~> 1.2.0
 ```
 
 ### Swift Package Manager
@@ -42,7 +42,7 @@ To add ReviewKit to your project simply add it to your dependencies array:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/simonmitchell/ReviewKit.git", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/simonmitchell/ReviewKit.git", .upToNextMajor(from: "1.2.0"))
 ]
 ```
 
