@@ -97,10 +97,10 @@ extension UserDefaults: ReviewRequestControllerStorage {
     
     public var numberOfSessions: Int {
         get {
-            return integer(forKey: UserDefaults.ReviewSessionsKey)
+            return integer(forKey: UserDefaults.NumberOfSessionsKey)
         }
         set {
-            set(newValue, forKey: UserDefaults.ReviewSessionsKey)
+            set(newValue, forKey: UserDefaults.NumberOfSessionsKey)
         }
     }
     
