@@ -233,6 +233,135 @@ public final class ReviewRequestController {
         storage.numberOfSessions += 1
     }
     
+    /// Returns whether the initial timeout for the first prompt to be shown has elapsed
+    /// - Parameter date: The date to check against, this allows for testing of this function
+    private func timeoutSinceFirstSessionHasElapsed(for date: Date = Date()) -> Bool {
+        // Make sure we meet the minimum timeout for showing this to the user
+        let firstSessionDate = storage.firstSessionDate ?? _currentSession.date
+        let numberOfSessions = storage.numberOfSessions
+        return initialRequestTimeout.hasElapsedFor(sessions: numberOfSessions, duration: date.timeIntervalSince(firstSessionDate))
+    }
+    
+    /// Returns whether the initial timeout for the first prompt to be shown has elapsed
+    public var timeoutSinceFirstSessionHasElapsed: Bool {
+        return timeoutSinceFirstSessionHasElapsed()
+    }
+    
+    /// Returns whether the timeout since the last review prompt was shown has elapsed
+    /// - Parameter date: The date to check against, this allows for testing of this function
+    private func timeoutSinceLastRequestHasElapsed(for date: Date = Date()) -> Bool {
+        // Make sure we meet the minimum timeout for showing this to the user
+        guard let lastRequestDate = storage.lastRequestDate, let lastRequestSession = storage.lastRequestSession else {
+            return true
+        }
+        let numberOfSessions = storage.numberOfSessions
+        return reviewRequestTimeout.hasElapsedFor(sessions: numberOfSessions - lastRequestSession, duration: date.timeIntervalSince(lastRequestDate))
+    }
+    
+    /// Returns whether the initial timeout for the first prompt to be shown has elapsed
+    public var timeoutSinceLastRequestHasElapsed: Bool {
+        return timeoutSinceLastRequestHasElapsed()
+    }
+    
+    /// Returns whether the bad request timeout has elapsed
+    /// - Parameter date: The date to check against, this allows for testing of this function
+    private func timeoutSinceLastBadSessionHasElapsed(for date: Date = Date()) -> Bool {
+        // Get all sessions exluding the current session
+        let sessions = storage.sessions.filter({ $0 != _currentSession })
+        
+        // Get the last bad session
+        guard let lastBadSessionElement = sessions.enumerated().map({ $0 }).last(where: { $0.element.isBad }) else {
+            return true
+        }
+        
+        let sessionsDiff = storage.sessions.count - lastBadSessionElement.offset
+        let timeSince = date.timeIntervalSince(lastBadSessionElement.element.date)
+        return badSessionTimeout.hasElapsedFor(sessions: sessionsDiff, duration: timeSince)
+    }
+    
+    /// Returns whether the bad request timeout has elapsed. This ignores the current session, which should be checked separately.
+    /// - Parameter date: The date to check against, this allows for testing of this function
+    public var timeoutSinceLastBadSessionHasElapsed: Bool {
+        return timeoutSinceLastBadSessionHasElapsed()
+    }
+    
+    /// Returns whether the app version has changed significantly enough since the last review prompt
+    public var versionChangeSinceLastRequestIsSatisfied: Bool {
+        guard let lastRequestVersion = storage.lastRequestVersion, let versionTimeout = reviewVersionTimeout else {
+            return true
+        }
+        return _currentSession.version - lastRequestVersion >= versionTimeout
+    }
+    
+    /// Returns whether the average score threshold has been met over the last n sessions. If no previous sessions have occured, this will return false
+    public var averageScoreThresholdIsMet: Bool {
+        
+        // Get all sessions exluding the current session
+        let sessions = storage.sessions.filter({ $0 != _currentSession })
+        guard averageScoreThreshold.sessions > 0 else {
+            return true
+        }
+        guard !sessions.isEmpty else {
+            return false
+        }
+        
+        let sessionsForAverage = sessions.suffix(averageScoreThreshold.sessions)
+        let averageScore = sessionsForAverage.map({ $0.score }).average
+        return averageScore >= averageScoreThreshold.score
+    }
+    
+    /// Returns whether the current session's score is above the threshold to show a review
+    public var currentSessionIsAboveScoreThreshold: Bool {
+        return _currentSession.score > scoreThreshold
+    }
+    
+    /// Returns whether all review prompt criteria have been satisfied in the current session for the given date
+    /// - Parameter date: The date to check all criteria against
+    /// - Returns: Whether all criteria have been satisfied
+    private func allReviewPromptCriteriaSatisfied(for date: Date = Date()) -> Bool {
+        // Make sure if the session has been marked as bad, then it's ignored if that option is enabled
+        guard !_currentSession.isBad || !disabledForBadSession else {
+            return false
+        }
+        
+        // Make sure we have met the score threshold for this session
+        guard currentSessionIsAboveScoreThreshold else {
+            return false
+        }
+        
+        // Test based on initial timeout
+        guard timeoutSinceFirstSessionHasElapsed(for: date) else {
+            return false
+        }
+        
+        // Make sure timeout since last bad session has elapsed!
+        guard timeoutSinceLastBadSessionHasElapsed(for: date) else {
+            return false
+        }
+        
+        // Test based on version change since last review
+        guard versionChangeSinceLastRequestIsSatisfied else {
+            return false
+        }
+        
+        // Test based on timeout since last review
+        guard timeoutSinceLastRequestHasElapsed(for: date) else {
+            return false
+        }
+
+        // Make sure average score is met!
+        guard averageScoreThresholdIsMet else {
+            return false
+        }
+        
+        return true
+    }
+    
+    /// Returns whether all review prompt criteria have been satisfied in the current session
+    public var allReviewPromptCriteriaSatisfied: Bool {
+        return allReviewPromptCriteriaSatisfied()
+    }
+    
     /// Logs a given app action
     /// - Parameter action: The action that occured
     /// - Parameter callback: A callback which lets you know if a review was requested (Or possibly requested in the case of SKStoreReviewController)
@@ -261,61 +390,9 @@ public final class ReviewRequestController {
             return
         }
         
-        // Make sure if the session has been marked as bad, then it's ignored if that option is enabled
-        guard !_currentSession.isBad || !disabledForBadSession else {
+        guard allReviewPromptCriteriaSatisfied(for: currentDate) else {
             callback?(Result.success(false))
             return
-        }
-        
-        // Make sure we have met the score threshold for this session
-        guard _currentSession.score > scoreThreshold else {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Make sure we meet the minimum timeout for showing this to the user
-        let firstSessionDate = storage.firstSessionDate ?? _currentSession.date
-        let numberOfSessions = storage.numberOfSessions
-        
-        // Test based on initial timeout
-        guard initialRequestTimeout.hasElapsedFor(sessions: numberOfSessions, duration: currentDate.timeIntervalSince(firstSessionDate)) else {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Get all sessions exluding the current session
-        let sessions = storage.sessions.filter({ $0 != _currentSession })
-        
-        // Make sure timeout since last bad session has elapsed!
-        if let lastBadSessionElement = sessions.enumerated().map({ $0 }).last(where: { $0.element.isBad }) {
-            let sessionsDiff = storage.sessions.count - lastBadSessionElement.offset
-            let timeSince = currentDate.timeIntervalSince(lastBadSessionElement.element.date)
-            if !badSessionTimeout.hasElapsedFor(sessions: sessionsDiff, duration: timeSince) {
-                callback?(Result.success(false))
-                return
-            }
-        }
-        
-        // Test based on version change since last review
-        if let lastRequestVersion = storage.lastRequestVersion, let versionTimeout = reviewVersionTimeout, _currentSession.version - lastRequestVersion < versionTimeout {
-            callback?(Result.success(false))
-            return
-        }
-        
-        // Test based on timeout since last review
-        if let lastRequestDate = storage.lastRequestDate, let lastRequestSession = storage.lastRequestSession, !reviewRequestTimeout.hasElapsedFor(sessions: numberOfSessions - lastRequestSession, duration: currentDate.timeIntervalSince(lastRequestDate)) {
-            callback?(Result.success(false))
-            return
-        }
-
-        // Make sure average score is met!
-        if averageScoreThreshold.sessions > 0, !sessions.isEmpty {
-            let sessionsForAverage = sessions.suffix(averageScoreThreshold.sessions)
-            let averageScore = sessionsForAverage.map({ $0.score }).average
-            if averageScore < averageScoreThreshold.score {
-                callback?(Result.success(false))
-                return
-            }
         }
         
         guard let reviewRequester = reviewRequester else {
