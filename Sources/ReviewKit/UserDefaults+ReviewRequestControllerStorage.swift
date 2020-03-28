@@ -19,7 +19,7 @@ extension UserDefaults: ReviewRequestControllerStorage {
     
     private static let LastReviewSessionKey = "ReviewRequestLastSession"
     
-    private static let NumberOfSessionsKey = "ReviewRequestSessions"
+    private static let NumberOfSessionsKey = "ReviewRequestSessionsNumber"
     
     private static let LastReviewVersionKey = "ReviewRequestLastVersion"
     
