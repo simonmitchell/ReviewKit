@@ -32,7 +32,7 @@ Usage on other platforms is outlined [below](#other-platforms)
 [Carthage](https://github.com/Carthage/Carthage) is a package manager which either builds projects and provides you with binaries or uses pre-built frameworks from release tags in GitHub. To add ReviewKit to your project, simply specify it in your `Cartfile`:
 
 ```ogdl
-github "simonmitchell/ReviewKit" ~> 1.1.0
+github "simonmitchell/ReviewKit" ~> 1.2.0
 ```
 
 ### Swift Package Manager
@@ -42,7 +42,7 @@ To add ReviewKit to your project simply add it to your dependencies array:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/simonmitchell/ReviewKit.git", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/simonmitchell/ReviewKit.git", .upToNextMajor(from: "1.2.0"))
 ]
 ```
 
@@ -102,6 +102,27 @@ var reviewRequester: ReviewRequester?
 You can control the review prompt that is shown by implementing the `ReviewRequester` protocol in your code, and setting this property. This defaults to `AppStoreReviewRequester` on supported operating systems which is a wrapper that calls `SKStoreReviewController.requestReview()`. 
 
 ⚠️ **If you are using this library on an operating system which doesn't support `SKStoreReviewController` you MUST provide a value for this property.** ⚠️
+
+###Accessing Checks
+
+The same checks that the library does internally can be accessed individually through a set of properties. These could be useful for example if you have a manually 
+
+|  Property  |  Description   |
+|---|---|
+|  timeoutSinceFirstSessionHasElapsed |  Whether the timeout since the first app session has elapsed  |
+|  timeoutSinceLastRequestHasElapsed   |  Whether the timeout since the last time the user was prompted for a review has passed  |
+|  timeoutSinceLastBadSessionHasElapsed  | Whether the timout since the last time the user experienced a 'bad' session has passed |
+| versionChangeSinceLastRequestIsSatisfied | Whether the required app version change has occured since the last version the user was prompted for a review on |
+| averageScoreThresholdIsMet | Whether the average score over the last 'n' sessions has been met. If no previous sessions are recorded, this will return `false` |
+| currentSessionIsAboveScoreThreshold | Whether the current session has met the required score threshold |
+
+All of these can be checked in one go by checking
+
+```swift
+ReviewRequestController.shared.allReviewPromptCriteriaSatisfied
+```
+
+The values returned in these variables are all based on thee configuration settings below.
 
 ## Configuration
 
