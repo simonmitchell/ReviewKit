@@ -279,7 +279,7 @@ public final class ReviewRequestController {
         return badSessionTimeout.hasElapsedFor(sessions: sessionsDiff, duration: timeSince)
     }
     
-    /// Returns whether the bad request timeout has elapsed
+    /// Returns whether the bad request timeout has elapsed. This ignores the current session, which should be checked separately.
     /// - Parameter date: The date to check against, this allows for testing of this function
     public var timeoutSinceLastBadSessionHasElapsed: Bool {
         return timeoutSinceLastBadSessionHasElapsed()
@@ -293,7 +293,7 @@ public final class ReviewRequestController {
         return _currentSession.version - lastRequestVersion >= versionTimeout
     }
     
-    /// Returns whether the average score threshold has been met over the last n sessions
+    /// Returns whether the average score threshold has been met over the last n sessions. If no previous sessions have occured, this will return false
     public var averageScoreThresholdIsMet: Bool {
         
         // Get all sessions exluding the current session
@@ -308,6 +308,11 @@ public final class ReviewRequestController {
         let sessionsForAverage = sessions.suffix(averageScoreThreshold.sessions)
         let averageScore = sessionsForAverage.map({ $0.score }).average
         return averageScore >= averageScoreThreshold.score
+    }
+    
+    /// Returns whether the current session's score is above the threshold to show a review
+    public var currentSessionIsAboveScoreThreshold: Bool {
+        return _currentSession.score > scoreThreshold
     }
     
     /// Logs a given app action
@@ -345,7 +350,7 @@ public final class ReviewRequestController {
         }
         
         // Make sure we have met the score threshold for this session
-        guard _currentSession.score > scoreThreshold else {
+        guard currentSessionIsAboveScoreThreshold else {
             callback?(Result.success(false))
             return
         }
