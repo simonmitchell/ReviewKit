@@ -28,7 +28,7 @@ Usage on other platforms is outlined [below](#other-platforms)
 
 ## Installation
 
-### CocoaPods
+### Carthage
 [Carthage](https://github.com/Carthage/Carthage) is a package manager which either builds projects and provides you with binaries or uses pre-built frameworks from release tags in GitHub. To add ReviewKit to your project, simply specify it in your `Cartfile`:
 
 ```ogdl
@@ -105,7 +105,7 @@ You can control the review prompt that is shown by implementing the `ReviewReque
 
 ###Accessing Checks
 
-The same checks that the library does internally can be accessed individually through a set of properties. These could be useful for example if you have a manually 
+The same checks that the library does internally can be accessed individually through a set of properties. These could be useful for example if you have a button in your UI which the user can use to go to your App's store page you could hide/show it using a combination of these properties.
 
 |  Property  |  Description   |
 |---|---|
