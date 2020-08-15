@@ -449,7 +449,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-iOS";
 				PRODUCT_NAME = ReviewKit;
 				SKIP_INSTALL = YES;
@@ -478,7 +478,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-iOS";
 				PRODUCT_NAME = ReviewKit;
 				SKIP_INSTALL = YES;
@@ -506,7 +506,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-watchOS";
 				PRODUCT_NAME = ReviewKit;
 				SDKROOT = watchos;
@@ -537,7 +537,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-watchOS";
 				PRODUCT_NAME = ReviewKit;
 				SDKROOT = watchos;
@@ -566,7 +566,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-tvOS";
 				PRODUCT_NAME = ReviewKit;
 				SDKROOT = appletvos;
@@ -596,7 +596,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-tvOS";
 				PRODUCT_NAME = ReviewKit;
 				SDKROOT = appletvos;
@@ -627,7 +627,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-macOS";
 				PRODUCT_NAME = ReviewKit;
 				SDKROOT = macosx;
@@ -657,7 +657,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowbrickbear.ReviewKit-macOS";
 				PRODUCT_NAME = ReviewKit;
 				SDKROOT = macosx;
