@@ -63,6 +63,7 @@ final class VersionTests: XCTestCase {
         XCTAssertLessThan(ReviewRequestController.Version(major: 0, minor: 2, patch: 3), ReviewRequestController.Version(major: 1, minor: 2, patch: 3))
         XCTAssertLessThan(ReviewRequestController.Version(major: 1, minor: 1, patch: 3), ReviewRequestController.Version(major: 1, minor: 2, patch: 3))
         XCTAssertLessThan(ReviewRequestController.Version(major: 1, minor: 2, patch: 2), ReviewRequestController.Version(major: 1, minor: 2, patch: 3))
+        XCTAssertGreaterThanOrEqual(ReviewRequestController.Version(major: 1, minor: 4, patch: 0), ReviewRequestController.Version(major: 1, minor: 4, patch: 0))
     }
 
     static var allTests = [
